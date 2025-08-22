@@ -1,0 +1,26 @@
+name : CI of the Project
+
+on:
+  pull_request:
+    brances:
+      - master
+jobs:
+  build:
+    name: Build NodeJs Applicaiton
+    runs-on: ubuntu-latest
+  steps:
+    - name: Checkout Code
+      uses: actions/checkout@3
+    
+    - name: Setup Nodejs
+      uses: actions/checkout@3
+      with:
+        node-version: 16
+      
+    - name: Install Dependencies
+      run: npm install
+    
+    - name: Build the App
+      run: npm run build
+
+      

@@ -30,6 +30,12 @@ app.get('/products/:id',(req,res) => {
         "message":"You hit the products id route"
     })
 })
+
+app.get('/orderes',(req,res) => {
+    res.json({
+        "message":"Orders Page"
+    })
+})
 app.listen(PORT, ()=> {
     console.log(`Listening at ${PORT}`)
 })

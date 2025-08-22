@@ -20,6 +20,12 @@ app.get('/',async(req, res) => {
     )
 })
 
+app.get('/products', (req,res) => {
+    res.json({
+        "message" : "You hit the products page"
+    })
+})
+
 app.listen(PORT, ()=> {
     console.log(`Listening at ${PORT}`)
 })

@@ -36,6 +36,12 @@ app.get('/orderes',(req,res) => {
         "message":"Orders Page"
     })
 })
+
+app.get('/orders/:id', (req,res) => {
+    res.json({
+        "message" : "Order Id Page"
+    })
+})
 app.listen(PORT, ()=> {
     console.log(`Listening at ${PORT}`)
 })
